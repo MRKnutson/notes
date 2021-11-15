@@ -14,6 +14,10 @@ class NotesController < ApplicationController
     redirect_to notes_path
   end
 
+  def destroy
+    Note.find(params[:id]).delete
+    redirect_to notes_path
+  end
   
 
 end
