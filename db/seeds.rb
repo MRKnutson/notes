@@ -8,9 +8,11 @@
 
 require "faker"
 
+Note.destroy_all
+
 10.times do
 Note.create(
-title: Faker::Hacker.abbreviation,
-description: Faker::Hacker.say_something_smart,
+title: Faker::Movies::LordOfTheRings.character,
+description: Faker::ChuckNorris.fact,
 )
 end

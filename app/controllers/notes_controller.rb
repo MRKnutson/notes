@@ -14,6 +14,25 @@ class NotesController < ApplicationController
     redirect_to notes_path
   end
 
+  def show
+    note = Note.find(params[:id])
+    render component: "Note", props: { note: note }
+  end 
+
+  # def edit
+  #   @note = Note.find(params[:id])
+  #   render component: "NoteEdit", props: { note: @note }
+  # end
+
+  # def update
+  #   @note = Note.find(params[:id])
+  #   if @note = Note.find(notes_params)
+  #     redirect_to notes_path
+  #   else
+  #     render component: "NoteEdit", { props: @note }
+  # end
+
+
   def destroy
     Note.find(params[:id]).delete
     redirect_to notes_path

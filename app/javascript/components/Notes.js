@@ -7,6 +7,7 @@ const Notes = (props) => {
     return props.notes.map((note) => {
       return (
       <div  style ={{margin: "20px", border: '1px solid'}}>
+        <p>{note.id}</p>
         <h1>{note.title}</h1>
         <p>{note.description}</p>
         <a href = {`/notes/${note.id}`} data-method="delete">Delete Note</a>

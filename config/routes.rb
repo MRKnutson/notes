@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "notes#index"
   get "/notes", to: "notes#index"
   get "/notes/new", to: "notes#new"
+  get "/notes/:id", to: "notes#show"
   post "/notes", to: "notes#create"
   delete "/notes/:id", to: "notes#destroy"
 
